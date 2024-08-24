@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Run Dino Chrome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="game">
+        <div class="top">
+            <span id="score"></span>
+            <div class="moon"></div>
+            <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+            <img class="desert-top" src="images/background/bg-desert-top.png" alt="">
+        </div>
+        <div class="middle">
+            <img class="desert-middle" src="images/background/bg-desert-middle.png" alt="">
+            <div id="cactus-bg">
+                <img id="cactus-bg-1" src="images/background/cactus-bg-1.png" alt="cactus">
+                <img id="cactus-bg-2" src="images/background/cactus-bg-2.png" alt="cactus">
+                <img id="cactus-bg-3" src="images/background/cactus-bg-3.png" alt="cactus">
+            </div>
+            <img class="desert-middle-2" src="images/background/bg-desert-middle.png" alt="">
+            <span id="start-screen">Press Any Key <br/> to Start</span>           
+        </div>
+        <div class="bottom">
+            <img class="desert-bottom" src="images/background/bg-desert-bottom.png" alt="">
+            <div class="game-area">
+                <img class="base-ground" src="images/background/base-ground.png" alt="">
+                <img class="ground" id="ground" src="images/background/ground.png" alt="" data-ground>
+                <div id="track">
+                    <img id="dino" src="images/characters/dino.gif" data-dino>
+                    <img id="cactus-char" class="cactus-char" src="images/characters/cactus-char.png" alt="cactus">
+               </div>
+            </div>
+            <img class="desert-bottom-2" src="images/background/bg-desert-bottom.png" alt="">       
+        </div>
+    </div>
+    <div id="modal">
+        <div class="content">
+            <h3 id="headerMessage"></h3>
+            <span id="message"></span>
+            <div class="scores">
+                <span id="yourScore"></span>
+                <div class="highestScore">
+                    <span>Highest Score : </span><span id="highestScore"></span>
+                </div>
+            </div>
+            <button class="action" onclick="window.location.reload()">Play Again</button>
+        </div>
+    </div>
+    <div id="modal">
+        <div class="content">
+            <h3 id="headerMessage"></h3>
+            <span id="message"></span>
+            <div class="scores">
+                <span id="yourScore"></span>
+                <div class="highestScore">
+                    <span>Highest Score : </span><span id="highestScore"></span>
+                </div>
+            </div>
+            <button class="action" onclick="window.location.reload()">Play Again</button>
+        </div>
+    </div>
+    <div id="countdown">
+        <div id="numbers"></div>
+    </div>
+      <script src="script.js" type="module"></script>
+</body>
+</html>
