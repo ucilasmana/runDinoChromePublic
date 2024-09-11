@@ -11,7 +11,7 @@ import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/fireb
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  ...
+...
 };
 
 const startScreenSpan = document.getElementById("start-screen")
@@ -104,7 +104,7 @@ function handleGame(){
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
     let cactusLeft = parseInt(window.getComputedStyle(cactusChar).getPropertyValue("left"));
 
-    if (cactusLeft > 0 && cactusLeft < 95 && dinoTop === 30) {
+    if (cactusLeft > 0 && cactusLeft < 120 && dinoTop === -10) {
         
         for (let i = 0; i < cactusBgDivChildren.length; i++) {
             cactusBgDivChildren[i].style.animationPlayState = "paused";
@@ -112,7 +112,6 @@ function handleGame(){
         ground.style.animationPlayState = "paused";
         dino.style.animationPlayState = "paused";
         dino.setAttribute('src', 'images/characters/dinoLose.png');
-        
         cactusChar.style.animationPlayState = "paused";
         showModal()
     }
@@ -154,7 +153,6 @@ function showModal(){
     }
     yourScoreSpan.innerHTML=Math.round(scoreValue)
 }
-
 
 
 
