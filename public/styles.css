@@ -23,7 +23,7 @@ body{
 .game {
     overflow: hidden;
     border-radius: 15px;
-    width: 400px;
+    width: 768px;
     background-color: rgb(32, 32, 32);
     position: relative;
     height: 90vh;
@@ -79,7 +79,7 @@ body{
 }
 .stars :nth-child(1) {
     left: 10%;
-    top: 35%;
+    top: 45%;
 }
 .stars :nth-child(2) {
     left: 30%;
@@ -104,8 +104,11 @@ body{
 .desert-top{
     position: relative;
     top:-30px;
-    height: 100%;
+    height: 150%;
+    width: 100%;
+    z-index: 10;
 }
+
 #score {
    position: absolute;
    z-index: 999;
@@ -119,15 +122,16 @@ body{
 /*MIDDLE-------------------*/
 .desert-middle{
     position: relative;
-    top: -85px;
+    top: -40px;
     width: 100%;
-    height: 100%;
+    height: 70px;
 }
 .desert-middle-2{
     z-index: 99;
     position: relative;
-    top: -110px;
+    top: -60px;
     left: -40px;
+    width: 125%;
     height: 100px;  
 }
 #cactus-bg{
@@ -138,28 +142,29 @@ body{
     position:absolute;
 }
 #cactus-bg-1{
-    height: 100px;  
-    top:-100px;
+    height: 120px;  
+    top:-75px;
     z-index: 999;
-    left: 500px;
+    left: 780px;
     animation:initial
 }
 #cactus-bg-2{
-    height: 120px;
-    top: -120px;
-    left: 500px;
+    height: 140px;
+    top: -90px;
+    left: 1080px;
     z-index: 999;
     animation:initial
 }
 #cactus-bg-3{
-    height: 120px;
-    top:-190px;
-    left: 500px;
+    height: 140px;
+    top:-170px;
+    left: 1080px;
+    z-index: 20;
     animation:initial
 }
 
 @keyframes cactus-bg {
-    0% { left: 500px; }
+    0% { left: 780px; }
     100% { left: -1200px; }
 }
 #start-screen {
@@ -180,15 +185,17 @@ body{
 }
 .desert-bottom{
     position: absolute;
-    top: -120px;
-    height:100%;
+    top: -100px;
+    height:150%;
     left: -100px;
+    width: 125%;
 }
 .desert-bottom-2{
     position: absolute;
     top: 50px;
     height: 100%;
     left: -100px;
+    width: 125%;
 }
 .game-area{
     position:relative;
@@ -211,29 +218,29 @@ body{
 }
 #dino {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    top: 30px;
-    left: 15px;
+    width: 120px;
+    height: 120px;
+    top: -10px;
+    left: 20px;
 }
 .jump {
-    animation: jump 0.35s linear;
+    animation: jump 0.38s linear;
 }
 @keyframes jump {
-    0% { top: 20px; }
-    50% { top: -170px; }
-    100% { top: 20px; }
+    0% { top: -10px; }
+    50% { top: -200px; }
+    100% { top: -10px; }
 }
 #cactus-char{
     position: absolute;
-    width: 35px; 
-    height: 45px;
-    top: 65px;
-    left: 500px;
+    width: 65px; 
+    height: 75px;
+    top: 35px;
+    left: 780px;
     animation: cactus-block 1.2s infinite linear;
 }
 @keyframes cactus-block {
-    0% { left: 500px; }
+    0% { left: 780px; }
     100% { left: 0px; }
 }
 
@@ -315,20 +322,176 @@ body{
     background-color: #1e1b49;
 }
 
-
-@media only screen and (max-width: 450px) {
-        .game {
-            border-radius: 0px;
-            width: 100%;
-            height: 100%;
-            border: none;
-            box-shadow: none;
-        }
-        .content{
-            width: 90%;
-            gap: 10px;
-        }
+@media only screen and (min-height:640px) and (min-width:640px)
+{
+    .desert-top{
+        height: 100%;
+        z-index: 0;
+    }
+    .desert-middle{
+        top: -125px;
+        height: 200px;  
+        width: 100%;
+    }
+    .desert-middle-2{
+        top: -210px;
+        height: 150px;  
+    }
+   
+    .base-ground{
+        top: 100px;
+        width: 100%;
+        height: 100px;
+    }
+    #ground{
+        top: 140px;
+    }    
+    .desert-bottom{
+           top: -225px;
+           height: 400px;
+    }
+    .desert-bottom-2{
+        top:25px;
+    }
+    #cactus-bg-1{
+        height: 150px;  
+        top:-190px;
+    }
+    #cactus-bg-2{
+        height: 160px;
+        top: -200px;
+    }
+    #cactus-bg-3{
+        height: 200px;
+        top:-300px;
+    }
+    #dino {
+        width: 100px;
+        height: 100px;
+        top: 50px;  
+    }
+    #cactus-char{
+        width: 55px; 
+        height: 75px;
+        top: 75px;
+    }
+    
+}
+@media only screen and (max-width: 800px) {
+    .game {
+        border-radius: 0px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        box-shadow: none;
+    }
+    .content{
+        width: 90%;
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .stars :nth-child(1) {
+        top: 35%;
+    }
+    .desert-top{
+        width: auto;
+        height: 100%;
+        z-index: 0;
+    }
        
+        .desert-middle{
+            top: -85px;
+            width: 100%;
+        }
+        .desert-middle-2{
+            top: -120px;
+            height: 120px;  
+        }
+        .desert-bottom{
+            top: -200px;
+            height:100%;
+            width: 150%;
+            left: -100px;
+        }
+        .desert-bottom-2{
+            width: 150%;
+        }
+        #cactus-bg-1{ 
+            height: 100px;  
+            top:-90px;
+        }
+        #cactus-bg-2{
+            height: 120px;
+            top: -110px;
+        }
+        #cactus-bg-3{
+            height: 120px;
+            top:-190px;
+        }
+}
+@media only screen and (max-height: 350px) and (min-width: 800px) {   
+    .moon{
+        top: 5%;
+        left: 3%;
+        height: 45px;
+        width: 45px;
+    }   
+        .desert-middle{
+            top: -5px;
+            width: 100%;
+        }
+        .desert-middle-2{
+            top: -100px;
+            height: 100px;  
+        }
+        .desert-bottom{
+            top: -20px;
+            height:100%;
+            width: 150%;
+            left: -100px;
+        }
+        .desert-bottom-2{
+            width: 150%;
+        }
+        .base-ground{
+            top: 50px;
+            width: 100%;
+            height: 40px;
+        }
+        #ground{
+            top: 55px;
+        }
+        #dino {
+            width: 90px;
+            height: 90px;
+            top: -25px;  
+        }
+        .jump {
+            animation: jump 0.38s linear;
+        }
+        @keyframes jump {
+            0% { top: -10px; }
+            50% { top: -110px; }
+            100% { top: -10px; }
+        }
+        #cactus-char{
+            width: 45px; 
+            height: 65px;
+            top: 0;
+        }
+        #cactus-bg-1{ 
+            height: 100px;  
+            top:-90px;
+        }
+        #cactus-bg-2{
+            height: 120px;
+            top: -110px;
+        }
+        #cactus-bg-3{
+            height: 120px;
+            top:-180px;
+        }
 }
 #countdown{
     background: var(--layer-color);
